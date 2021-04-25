@@ -1,9 +1,17 @@
-import Item from './Item/Item'
-import './App.css';
+import React from "react";
+import Child from "./Child/Child";
+import "./App.css";
+import { contract } from "./Child/Child";
 
 function App() {
   return (
-		<Item />
+    <>
+      <div>
+        {contract.map((item) => {
+          return <Child data={item} />;
+        })}
+      </div>
+    </>
   );
 }
 
